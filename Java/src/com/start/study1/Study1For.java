@@ -13,13 +13,16 @@ public class Study1For {
 		long num = sc.nextLong();
 		
 		//입력받은 정수의 약수
+		//약수의 개수를 출력하세요
+		int count = 0;
 		for(long i = 1 ; i <= (long)Math.sqrt(num)/2 ; ++i) {
 			if(num%i == 0) {
 				System.out.println(i);
 				System.out.println(num/i);
+				count += (num/i == i)?1:2;
 			}
 		}
-		
+		System.out.println("약수의 개수 : " + count );
 	}
 
 }
