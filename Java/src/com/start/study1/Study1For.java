@@ -6,6 +6,7 @@ public class Study1For {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("프로그램 시작");
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("정수 하나를 입력하세요.");
