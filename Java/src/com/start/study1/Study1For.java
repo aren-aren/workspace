@@ -1,7 +1,5 @@
 package com.start.study1;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
@@ -20,7 +18,7 @@ public class Study1For {
 		
 		//입력받은 정수의 약수
 		//약수의 개수를 출력하세요
-		for(long i = 1 ; i <= (long)Math.sqrt(num)/2 ; ++i) {
+		for(long i = 1 ; i <= (long)Math.sqrt(num)+1 ; ++i) {
 			if(num%i == 0) {
 				lpq.add(i);
 				
