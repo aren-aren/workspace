@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 비만 관리 업체 회원정보 입력 폼 -->
+    <!-- 이름, 나이, 성별, 키, 몸무게 -->
+    <form>
+        <fieldset>
+            <legend>회원 정보</legend>
+            <label for="user_name">이름 : </label>
+            <input type="text" id="user_name"><br>
+            <label for="user_age">나이 : </label>
+            <input type="number" id="user_age"><br>
+            성별 :
+            <input type="radio" name="user_gender" id="male" value="male">
+            <label for="male"> 남</label>
+            <input type="radio" name="user_gender" id="female" value="female">
+            <label for="female"> 여</label><br>
+            <label for="user_height">키 : </label>
+            <input type="number" id="user_height"><br>
+            <label for="user_weight">몸무게 : </label>
+            <input type="number" id="user_weight"><br>
+            <button id="btn" type="button">등록</button>
+        </fieldset>
+    </form>
+    <script src="study1.js"></script>
+</body>
+</html>
