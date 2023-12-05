@@ -9,15 +9,15 @@ public class Study1For {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("정수 하나를 입력하세요.");
-		int num = sc.nextInt();
+		long num = sc.nextLong();
 		
 		//입력받은 정수의 약수
-		for(int i = 1 ; i < num ; ++i) {
+		for(long i = 1 ; i <= (long)Math.sqrt(num)/2 ; ++i) {
 			if(num%i == 0) {
 				System.out.println(i);
+				System.out.println(num/i);
 			}
 		}
-		System.out.println(num);
 		
 	}
 
