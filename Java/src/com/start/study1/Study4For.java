@@ -14,26 +14,37 @@ public class Study4For {
 		//2. 점사 - 탕탕탕
 		Scanner sc = new Scanner(System.in);
 		
-		for(int i = 0 ; i < 3 ; ++i) {
-			System.out.println("1.단발 2.점사");
-			int input = sc.nextInt();
-			int count = 0;
-			
-			for(int j = 0 ; j < 30 ; ++j) {
-				String shot = "탕";
-				
-				if(input == 2) {
-					shot = "탕탕탕";
-					j+=2;
-				}
-				
-				count++;
-				System.out.println(shot);
+		int input = 0;
+		int count = 0;
+		for(int i = 0 ; i < 90 ; ++i) {
+			if(i%30 == 0) {
+				System.out.printf("1.단발 2.점사 (남은 탄창 : %d)\n",(90-i)/30);
+				input = sc.nextInt();
 			}
-			System.out.println(count + "번 쐈다");
 			
-			if(i != 2) {
-				System.out.println("리로드 중..");
+			String shot = "탕";
+				
+			if(input == 2) {
+				shot = "탕탕탕";
+				i+=2;
+			}
+			
+			int luckey = (int)Math.ceil(100*Math.random());
+				
+			count++;
+			System.out.println(luckey + " : " + shot);
+			
+			if(luckey == 100) {
+				System.out.println("탄창을 얻었습니다. (탄창 + 1)");
+				i -= 30;
+			}
+			
+			if((i+930)%30 == 29) {
+				System.out.println(count + "번 쐈습니다.");
+				
+				if(i != 89) {
+					System.out.println("리로드 중..");
+				}
 			}
 		}
 		
