@@ -1,4 +1,4 @@
-package Study2;
+package com.start.study2;
 
 public class ArrayStudy2 {
 

@@ -1,4 +1,6 @@
-package Study2;
+package com.start.study2;
+
+import java.util.Arrays;
 
 public class ArrayStudy3 {
 
@@ -6,7 +8,7 @@ public class ArrayStudy3 {
 		// TODO Auto-generated method stub
 		int[] ar = {2,5,4,1,3};
 		
-		for(int i = 0 ; i < ar.length ; ++i) {
+		for(int i = 0 ; i < ar.length-1 ; ++i) {
 			
 			int idx = i;
 			for(int j = i+1 ; j < ar.length ; ++j) {
@@ -15,13 +17,15 @@ public class ArrayStudy3 {
 				}
 			}
 			
-			int num = ar[idx];
-			ar[idx] = ar[i];
-			ar[i] = num;
+//			int num = ar[idx];
+//			ar[idx] = ar[i];
+//			ar[i] = num;
 			
-//			ar[idx] = ar[idx] + ar[i];
-//			ar[i] = ar[idx] - ar[i];
-//			ar[idx] = ar[idx] - ar[i];
+			ar[idx] = ar[idx] + ar[i];
+			ar[i] = ar[idx] - ar[i];
+			ar[idx] = ar[idx] - ar[i];
+			
+			
 		}
 		
 		for(int i = 0 ; i < ar.length ; ++i) {
