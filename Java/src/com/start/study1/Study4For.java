@@ -53,11 +53,11 @@ public class Study4For {
 			}
 		}
 		
-		int lev = 0;
+		int lev = 1;
 		int gold = 0;
 		int levlimit = 15;
 		
-		for(lev = 1 ; lev < levlimit ;) {
+		while(lev < levlimit) {
 			
 			//사냥
 			for(int mon = 1 ; mon <= 3*lev ; ++mon) {
