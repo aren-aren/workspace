@@ -19,9 +19,9 @@ public class ArrayStudy3 {
 			ar[idx] = ar[i];
 			ar[i] = num;
 			
-			ar[idx] = ar[idx] + ar[i];
-			ar[i] = ar[idx] - ar[i];
-			ar[idx] = ar[idx] - ar[i];
+//			ar[idx] = ar[idx] + ar[i];
+//			ar[i] = ar[idx] - ar[i];
+//			ar[idx] = ar[idx] - ar[i];
 		}
 		
 		for(int i = 0 ; i < ar.length ; ++i) {
