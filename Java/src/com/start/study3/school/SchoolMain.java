@@ -34,14 +34,18 @@ public class SchoolMain {
 		int num = scan.nextInt();
 		
 		Student[] students = new Student[num];
-		for(int i = 0 ; i < num ; ++i) {
-			students[i] = new Student();
+		
+		for(int i = 0 ; i < students.length ; ++i) {
+			Student stu = new Student();
+			
 			System.out.println("학생 이름 : ");
-			students[i].name = scan.next();
+			stu.name = scan.next();
 			System.out.println("학생 번호 : ");
-			students[i].num = scan.nextInt();
+			stu.num = scan.nextInt();
 			System.out.println("학생 학점 : ");
-			students[i].grade = scan.nextDouble();
+			stu.grade = scan.nextDouble();
+			
+			students[i] = stu;
 		}
 		
 		for(int i = 0 ; i < num ; ++i) {
