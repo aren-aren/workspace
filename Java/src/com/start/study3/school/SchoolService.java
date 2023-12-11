@@ -28,9 +28,45 @@ public class SchoolService {
 		return students;
 	}
 	
-	public Student searchStudent(Student[] students) {
+	//findByNum
+	//학생번호를 입력받아서, 일치하는 학생이 있는지 검색
+	//해당 학생을 리턴, 없으면 null을 리턴
+	public Student findByNum(Student[] students) {
+		Scanner scan = new Scanner(System.in);
 		Student target = null;
 		
+		System.out.println("찾을 학생의 번호 : ");
+		int num = scan.nextInt();
+		
+		for(int i = 0 ; i < students.length ; ++i) {
+			if(students[i].num == num) {
+				target = students[i];
+				break;
+			}
+		}
+		
 		return target;
+	}
+	
+	//addStudent
+	//이름, 번호, 점수를 입력받아서 기본 배열에 추가한 효과
+	public Student[] addStudent(Student[] students) {
+		Scanner scan = new Scanner(System.in);
+		
+		Student[] newStudents = new Student[students.length+1];
+		for(int i = 0 ; i < students.length ; ++i) {
+			newStudents[i] = students[i];
+		}
+		
+		newStudents[students.length] = new Student();
+		
+		System.out.println("추가할 학생의 이름 : ");
+		newStudents[students.length].name = scan.next();
+		System.out.println("추가할 학생의 번호 : ");
+		newStudents[students.length].num = scan.nextInt();
+		System.out.println("추가할 학생의 학점 : ");
+		newStudents[students.length].grade = scan.nextDouble();
+		
+		return newStudents;
 	}
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <tagName 속성명="값">Contents</tagName> -->
+    <input type="checkbox" name="ch" id="all">
+    <input type="checkbox" name="ch" class="check">
+    <input type="checkbox" name="ch" class="check">
+    <input type="checkbox" name="ch" class="check">
+    <input type="checkbox" name="ch" class="check">
+    <script>
+        const all = document.getElementById("all");
+        const boxes = document.querySelectorAll("input.check");
+
+        all.addEventListener("change",event=>{
+            boxes.forEach(e=>e.checked = event.target.checked);
+        })
+
+        boxes.forEach(box => box.addEventListener("change", event=>{
+            let isChecked = true;
+
+            boxes.forEach(b=>isChecked&=b.checked)
+            // for(let i = 0 ; i < boxes.length ; ++i){
+            //     isChecked &= boxes[i].checked;
+            // }
+
+            all.checked = isChecked;
+        }))
+    </script>
+</body>
+</html>

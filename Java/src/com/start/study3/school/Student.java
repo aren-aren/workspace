@@ -8,5 +8,7 @@ public class Student {
 	double grade;
 	
 	//멤버메서드 선언
-	
+	public void printInfo() {
+		System.out.println("번호 : " + this.num + " 이름 : " + this.name + " 학점 : " + this.grade);
+	}
 }

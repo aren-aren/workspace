@@ -1,5 +1,6 @@
 package com.start.study3.school;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SchoolController {
@@ -31,7 +32,7 @@ public class SchoolController {
 			
 			//입력된 학생이 없을 때 조회 불가
 			if(students == null) {
-				System.out.println("입력된 학생이 없습니다.");
+				schoolView.view("입력된 학생이 없습니다.");
 				continue;
 			}
 			
@@ -43,13 +44,18 @@ public class SchoolController {
 			
 			//학생 정보 검색
 			if(select == 3) {
-				
+				Student student = schoolService.findByNum(students);
+				if(student != null) {
+					schoolView.view(student);					
+				} else {
+					schoolView.view("찾는 학생이 없습니다.");
+				}
 				continue;
 			}
 			
 			//학생 정보 추가
 			if(select == 4) {
-				
+				students = schoolService.addStudent(students);
 				continue;
 			}
 		}
