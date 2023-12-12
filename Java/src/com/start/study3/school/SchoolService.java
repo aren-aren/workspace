@@ -3,11 +3,10 @@ package com.start.study3.school;
 import java.util.Scanner;
 
 public class SchoolService {
+	Scanner scan = new Scanner(System.in);
 	
 	public Student[] makeStudents() {
-		//학생 수를 입력받아서 수만큼 학생 정보 입력
-		Scanner scan = new Scanner(System.in);
-		
+		//학생 수를 입력받아서 수만큼 학생 정보 입력		
 		System.out.println("입력할 학생 수:");
 		int n = scan.nextInt();
 		
@@ -32,7 +31,6 @@ public class SchoolService {
 	//학생번호를 입력받아서, 일치하는 학생이 있는지 검색
 	//해당 학생을 리턴, 없으면 null을 리턴
 	public Student findByNum(Student[] students) {
-		Scanner scan = new Scanner(System.in);
 		Student target = null;
 		
 		System.out.println("찾을 학생의 번호 : ");
@@ -51,7 +49,6 @@ public class SchoolService {
 	//addStudent
 	//이름, 번호, 점수를 입력받아서 기본 배열에 추가한 효과
 	public Student[] addStudent(Student[] students) {
-		Scanner scan = new Scanner(System.in);
 		
 		Student[] newStudents = new Student[students.length+1];
 		for(int i = 0 ; i < students.length ; ++i) {
