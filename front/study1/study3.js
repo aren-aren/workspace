@@ -1,4 +1,13 @@
 const btn = document.getElementById("addBtn");
+
+document.getElementById("result").addEventListener("click",(event)=>{
+    console.log(event.target.classList.contains("remove"));
+    console.log(event.target.parentNode);
+    if(event.target.classList.contains("remove")){
+        event.target.parentNode.remove();
+    }
+})
+
 btn.addEventListener("click", () => {
     const num = document.querySelectorAll("div>input[type=file]").length;
 
@@ -13,7 +22,8 @@ btn.addEventListener("click", () => {
     input.setAttribute("type", "file");
     
     const span = document.createElement("span");
-    span.addEventListener("click", deleteBtn);
+    //span.addEventListener("click", deleteBtn);
+    span.classList.add("remove");
     span.innerText = "X";
 
     div.appendChild(input);
