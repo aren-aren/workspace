@@ -1,6 +1,5 @@
 package com.start.study3.school;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class SchoolController {
