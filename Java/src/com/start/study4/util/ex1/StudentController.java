@@ -29,12 +29,27 @@ public class StudentController {
 			
 			int select = scan.nextInt();
 			
+			if(select == 6) {
+				break;
+			}
+			
 			if(select == 1) {
 				studentView.view(studentList);
-			} else if(select == 2) {
-				
-			} else {
-				break;
+			}
+			
+			if(select == 2) {
+				StudentDTO stu = studentService.findByName(studentList);
+				if(stu != null) {
+					studentView.view(stu);
+				}
+			}
+			
+			if(select == 3) {
+				studentService.studentAdd(studentList);
+			}
+			
+			if(select == 4) {
+				studentService.studentDelete(studentList);
 			}
 		}
 	}

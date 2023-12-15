@@ -3,7 +3,6 @@ package com.start.study4.util.ex2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.Random;
 import java.util.Set;
 
@@ -17,7 +16,7 @@ public class StudySetInfo {
 	public void ex0() {
 		int idx = 0;
 		
-		while(true) {
+		while(idx < 6) {
 			int num = random.nextInt(45) + 1;
 			
 			for(int i = 0 ; i < idx ; ++i) {
@@ -26,32 +25,25 @@ public class StudySetInfo {
 			
 			intArr[idx] = num;
 			idx++;
-			
-			if(idx == 6) return;
 		}
 	}
 
 	//로또번호 1 ~ 45 , 6개
 	public void ex1() {
 		//arraylist
-		while(true) {
+		while(ar.size() < 6) {
 			int num = random.nextInt(45) + 1;
 			
 			if(ar.contains(num)) continue;
 			
 			ar.add(num);
-			
-			if(ar.size() == 6) return;
 		}
 	}
 	
 	public void ex2() {
 		//hashset
-		while(true) {
-			int num = random.nextInt(45) + 1;
-			set.add(num);
-			
-			if(set.size() == 6) return;
+		while(set.size() < 6) {
+			set.add(random.nextInt(45) + 1);
 		}
 	}
 

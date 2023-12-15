@@ -5,7 +5,6 @@ import java.util.Random;
 public class Ex2Main {
 
 	public static void main(String[] args) {
-		Random random = new Random();
 		StudySetInfo ssi = new StudySetInfo();
 		
 		ssi.ex0();
