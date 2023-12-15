@@ -14,8 +14,6 @@ public class StudyList3Main {
 		sl3.add(ar);
 		sl3.add(ar);
 		sl3.add(ar);
-		sl3.add(ar);
-		sl3.add(ar);
 		
 		for(Integer i : ar) {
 			System.out.println(i);
