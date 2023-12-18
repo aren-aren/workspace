@@ -41,7 +41,7 @@ public class StudentService {
 			stu.setMath(n);
 			
 			stu.setSum(sum);
-			stu.setAve(sum/3);
+			stu.setAve(sum/3.0);
 			
 			students.add(stu);
 		}
@@ -86,7 +86,7 @@ public class StudentService {
 		sum += n;
 		
 		stu.setSum(sum);
-		stu.setAve(sum/3);
+		stu.setAve(sum/3.0);
 		
 		studentList.add(stu);
 	}

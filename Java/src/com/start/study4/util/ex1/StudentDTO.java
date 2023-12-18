@@ -11,7 +11,7 @@ public class StudentDTO {
 	private int math;
 	
 	private int sum;
-	private int ave;
+	private Double ave;
 	
 	
 	public String getName() {
@@ -65,11 +65,11 @@ public class StudentDTO {
 		this.sum = sum;
 	}
 
-	public int getAve() {
+	public double getAve() {
 		return ave;
 	}
 
-	public void setAve(int ave) {
+	public void setAve(double ave) {
 		this.ave = ave;
 	}
 
