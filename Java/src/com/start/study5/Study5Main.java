@@ -20,10 +20,17 @@ public class Study5Main {
 			arr[3] = 30;	
 		
 		} catch(ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();
 			System.out.println("123");
 		} catch (RuntimeException e) {
 			System.out.println("Exception 발생");
+		} catch (Exception e) {
+			
+		} finally {
+			
 		}
+		
+		
 		System.out.println("정상 진행");
 		int a = 10;
 		 a /= 0;
