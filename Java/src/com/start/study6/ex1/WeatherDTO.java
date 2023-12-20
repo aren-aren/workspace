@@ -33,6 +33,10 @@ public class WeatherDTO {
 	
 	@Override
 	public String toString() {
-		return "지역 : " + this.region + "\t날씨 : " + this.weather + "\t기온 : " + this.temperature + "\t습도 : " + this.humidity;
+		return "지역 : " + this.region + "\t날씨 : " + this.weather + "\t기온 : " + this.temperature + "\t습도 : " + this.humidity + "%";
+	}
+	
+	public String[] saveInfo() {
+		return new String[]{this.region, this.weather , this.temperature + "", this.humidity + ""};
 	}
 }
