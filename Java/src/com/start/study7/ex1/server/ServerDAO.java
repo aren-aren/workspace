@@ -21,7 +21,7 @@ public class ServerDAO {
 			file = new File(file, recentFileName);
 			
 			if(!file.exists()) {
-				return new ArrayList<WeatherDTO>();
+				return new ArrayList<>();
 			}
 			
 			FileReader fr = new FileReader(file);
@@ -54,9 +54,9 @@ public class ServerDAO {
 		StringBuilder sb = new StringBuilder();
 		list.stream()
 			.map(WeatherDTO::toString)
-			.forEach(e -> sb.append(e + "!!!"));
+			.forEach(e -> sb.append(e).append("!!!"));
 		
-		System.out.println(sb.toString());
+		System.out.println(sb);
 		
 		return sb.toString();
 	}

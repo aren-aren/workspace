@@ -18,7 +18,7 @@ public class WeatherService {
 		
 		for(int i = 0 ; i < len ; ++i) {
 			weathers[i] = new WeatherData();
-			weathers[i].setRegion(dataArr[i*4 + 0]);
+			weathers[i].setRegion(dataArr[i * 4]);
 			weathers[i].setTemperature(dataArr[i*4 + 1]);
 			weathers[i].setWeather(dataArr[i*4 + 2]);
 			weathers[i].setHumidity(dataArr[i*4 + 3]);

@@ -10,6 +10,12 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class ClientController {
+	ClientView view;
+
+	public ClientController() {
+		this.view = new ClientView();
+	}
+
 	public void start() throws Exception {
 		//1. 서버와 소켓 연결 시도
 		
@@ -43,7 +49,7 @@ public class ClientController {
 			System.out.println("보냄");
 			
 			String msg = br.readLine();
-			System.out.println(String.join("\n",msg.split("!!!")));
+			view.view(msg);
 		}
 		
 		bw.close();
