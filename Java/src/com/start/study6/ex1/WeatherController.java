@@ -63,8 +63,8 @@ public class WeatherController {
 					weatherView.view(ar);
 				} else if(select == 2) {
 					WeatherDTO dto = weatherDAO.getDetail(ar, scan);
-					weatherView.view(dto);
-				} else if(select == 3) {
+				weatherView.view(dto);
+					} else if(select == 3) {
 					if(weatherDAO.add(ar, scan)) {
 						System.out.println("추가 성공");
 					} else {
@@ -78,7 +78,7 @@ public class WeatherController {
 					break;
 				}
 			} catch (Exception e) {
-				System.out.println("잘못된 입력입니다.");
+				System.out.println("잘못된 입력입니다."); 
 				System.out.println(scan.next());
 			}
 		}

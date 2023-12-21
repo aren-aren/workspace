@@ -6,6 +6,18 @@ public class WeatherDTO {
 	private int temperature;
 	private int humidity;
 	
+	
+	
+	public WeatherDTO() {
+		super();
+	}
+	public WeatherDTO(String region, String weather, int temperature, int humidity) {
+		super();
+		this.region = region;
+		this.weather = weather;
+		this.temperature = temperature;
+		this.humidity = humidity;
+	}
 	public String getRegion() {
 		return region;
 	}
