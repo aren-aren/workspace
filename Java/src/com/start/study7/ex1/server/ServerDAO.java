@@ -52,9 +52,13 @@ public class ServerDAO {
 	public String listToString(List<WeatherDTO> list) {
 		
 		StringBuilder sb = new StringBuilder();
-		list.stream()
-			.map(WeatherDTO::toString)
-			.forEach(e -> sb.append(e).append("!!!"));
+		String str = list.stream()
+				.map(WeatherDTO::toString)
+				.collect(Collectors.joining("!!!"));
+		
+		sb.append("--------- 날씨정보 ---------!!!");
+		sb.append(str);
+		sb.append("!!!----------------------------");
 		
 		System.out.println(sb);
 		
